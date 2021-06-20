@@ -1,0 +1,316 @@
+// INCLUDING FONTS
+
+@font-face {
+    font-family: "Rocoleta";
+    src: url("/fonts/Recoleta-RegularDEMO.otf");
+}
+@font-face {
+    font-family: "Avenir";
+    src: url("/fonts/AvenirLTStd-Roman.otf");
+}
+
+//
+
+// VARIABLES
+$color-primary: #4d3c5e;
+$color-blue: #4b64ef;
+$color-white: #fff;
+$color-dark: #161c2d;
+
+$font-secondary: "Avenir", sans-sarif;
+$font-primary: "Rocoleta", sans-serif;
+
+//
+
+// BASE STYLESHEET
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+    // cursor: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px / 16px = 62.5%
+}
+
+body {
+    background-color: $color-white;
+    font-family: $font-secondary;
+    color: $color-primary;
+    transition: all .3s;
+
+}
+.dark-mode{
+    background-color: $color-dark;
+    color: $color-white;
+
+    .nav__link{
+        color: $color-white;
+    }
+
+    .projects__details .number{
+        color: $color-dark;
+        text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+    .footer{
+        ion-icon{
+            color: $color-blue;
+            
+            &:hover{
+                color: $color-white;
+            }
+        }
+    }
+}
+
+// /////////
+
+// mixins
+@mixin flexCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// //////////
+
+// TYPOGRAPHY
+
+.heading-primary {
+    font-family: $font-primary;
+    font-size: 5rem;
+    text-align: center;
+    padding: 2rem 0;
+
+}
+.heading-secondary {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
+.copyright {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+// ////////////
+
+// COMPONENTS
+
+.nav {
+    @include flexCenter;
+    padding: 0px 2rem;
+
+    &__logo {
+    }
+    &__logo-img {
+        width: 25rem;
+    }
+    &__items {
+        @include flexCenter;
+        list-style: none;
+        flex: 0 0 50%;
+    }
+    &__item {
+        
+    }
+    &__link {
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: medium;
+        color: $color-primary;
+    }
+}
+
+.btn {
+    padding: 1.8rem 4rem;
+    font-family: inherit;
+    font-size: 1.8rem;
+    background-color: $color-blue;
+    color: #fff;
+    border-radius: 50px;
+    margin: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
+
+    &:hover {
+        padding: 1.8rem 4.5rem;
+        box-shadow: 0 15px 54px rgba(0, 0, 0, 0.12);
+    }
+
+    &--sec {
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        margin: 1rem 1rem 0 0;
+
+        &:hover {
+            padding: 1rem 2.2rem;
+            box-shadow: 0 15px 54px rgba(0, 0, 0, 0.12);
+        }
+    }
+}
+
+// /////////
+
+// LAYOUT
+
+.header {
+    text-align: center;
+    margin-top: 5rem;
+
+    &__img {
+        display: block;
+        width: 30rem;
+        margin: 1rem auto;
+        height: 30rem;
+        border-radius: 50%;
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+
+        transition: all 0.5s;
+        transform: scale(1);
+
+        &:hover {
+            transform: scale(0.95);
+            box-shadow: 0 1rem 7rem rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.projects {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-row-gap: 12rem;
+    grid-column-gap: 5rem;
+    justify-content: center;
+
+    &__heading {
+        grid-column: 1 / -1;
+        font-size: 2rem;
+        margin-bottom: -8rem;
+    }
+
+    &__details {
+        width: 95%;
+        transition: all 0.8s;
+        align-self: center;
+        grid-template-columns: 0 / 1;
+
+        // color: #fff;
+        text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+        .number {
+            float: right;
+            font-size: 15rem;
+            // margin-left: -5rem;
+            margin-top: -3rem;
+            line-height: 1;
+            color: #fff;
+        }
+        .name {
+            font-size: 4rem;
+            font-family: $font-primary;
+        }
+        .short-summery {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        .tech-used {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                padding: 0.5rem 1rem;
+                font-size: 1.5rem;
+                background-color: #fff;
+                color: $color-primary;
+                border-radius: 3px;
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+                margin-bottom: 1rem;
+
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+        .links {
+            margin-top: 1rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        transition: all 0.5s;
+        transform: scale(1);
+
+        &:hover {
+            transform: scale(0.98);
+            border-radius: 1rem;
+        }
+    }
+}
+
+
+
+.footer {
+    .heading-primary {
+        padding: 8rem 0;
+    }
+    .heading-secondary {
+        padding-bottom: 5rem;
+    }
+    ion-icon{
+        font-size: 3.5rem;
+        margin: 0 1rem;
+        color: $color-primary;
+        transition: all .3s;
+        
+        &:hover{
+            color: $color-blue;
+        }
+    }
+
+    .contact-links {
+        padding: 2rem;
+        width: fit-content;
+        margin: 1rem auto;
+        display: block;
+
+        &__link{
+            text-decoration: none;
+
+           
+        }
+    }
+}
+
+// ANIMATIONS
+@keyframes fadeOut {
+    0% {
+    }
+    50% {
+    }
+    100% {
+    }
+}

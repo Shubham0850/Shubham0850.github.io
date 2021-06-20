@@ -1,0 +1,23 @@
+{
+  "name": "shubham",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass main.scss style.css -w",
+    "compile:sass": "node-sass main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shubham0850/Shubham0850.github.io.git"
+  },
+  "author": "shubham raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shubham0850/Shubham0850.github.io/issues"
+  },
+  "homepage": "https://github.com/Shubham0850/Shubham0850.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

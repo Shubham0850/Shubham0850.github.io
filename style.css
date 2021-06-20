@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "Rocoleta";
+  src: url("/fonts/Recoleta-RegularDEMO.otf"); }
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirLTStd-Roman.otf"); }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  background-color: #fff;
+  font-family: "Avenir", sans-sarif;
+  color: #4d3c5e;
+  transition: all .3s; }
+
+.dark-mode {
+  background-color: #161c2d;
+  color: #fff; }
+  .dark-mode .nav__link {
+    color: #fff; }
+  .dark-mode .projects__details .number {
+    color: #161c2d;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .dark-mode .footer ion-icon {
+    color: #4b64ef; }
+    .dark-mode .footer ion-icon:hover {
+      color: #fff; }
+
+.heading-primary {
+  font-family: "Rocoleta", sans-serif;
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem 0; }
+
+.heading-secondary {
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem; }
+
+.copyright {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem 0; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 2rem; }
+  .nav__logo-img {
+    width: 25rem; }
+  .nav__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex: 0 0 50%; }
+  .nav__link {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: medium;
+    color: #4d3c5e; }
+
+.btn {
+  padding: 1.8rem 4rem;
+  font-family: inherit;
+  font-size: 1.8rem;
+  background-color: #4b64ef;
+  color: #fff;
+  border-radius: 50px;
+  margin: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12); }
+  .btn:hover {
+    padding: 1.8rem 4.5rem;
+    box-shadow: 0 15px 54px rgba(0, 0, 0, 0.12); }
+  .btn--sec {
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    margin: 1rem 1rem 0 0; }
+    .btn--sec:hover {
+      padding: 1rem 2.2rem;
+      box-shadow: 0 15px 54px rgba(0, 0, 0, 0.12); }
+
+.header {
+  text-align: center;
+  margin-top: 5rem; }
+  .header__img {
+    display: block;
+    width: 30rem;
+    margin: 1rem auto;
+    height: 30rem;
+    border-radius: 50%;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+    transform: scale(1); }
+    .header__img:hover {
+      transform: scale(0.95);
+      box-shadow: 0 1rem 7rem rgba(0, 0, 0, 0.1); }
+
+.projects {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-row-gap: 12rem;
+  grid-column-gap: 5rem;
+  justify-content: center; }
+  .projects__heading {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    margin-bottom: -8rem; }
+  .projects__details {
+    width: 95%;
+    transition: all 0.8s;
+    align-self: center;
+    grid-template-columns: 0 / 1;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+    .projects__details .number {
+      float: right;
+      font-size: 15rem;
+      margin-top: -3rem;
+      line-height: 1;
+      color: #fff; }
+    .projects__details .name {
+      font-size: 4rem;
+      font-family: "Rocoleta", sans-serif; }
+    .projects__details .short-summery {
+      font-size: 1.8rem;
+      margin-bottom: 2rem; }
+    .projects__details .tech-used {
+      font-size: 2.5rem;
+      margin-bottom: 1rem; }
+    .projects__details ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap; }
+      .projects__details ul li {
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        background-color: #fff;
+        color: #4d3c5e;
+        border-radius: 3px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+        margin-bottom: 1rem; }
+        .projects__details ul li:not(:last-child) {
+          margin-right: 1rem; }
+    .projects__details .links {
+      margin-top: 1rem; }
+  .projects__img {
+    width: 100%;
+    transition: all 0.5s;
+    transform: scale(1); }
+    .projects__img:hover {
+      transform: scale(0.98);
+      border-radius: 1rem; }
+
+.footer .heading-primary {
+  padding: 8rem 0; }
+
+.footer .heading-secondary {
+  padding-bottom: 5rem; }
+
+.footer ion-icon {
+  font-size: 3.5rem;
+  margin: 0 1rem;
+  color: #4d3c5e;
+  transition: all .3s; }
+  .footer ion-icon:hover {
+    color: #4b64ef; }
+
+.footer .contact-links {
+  padding: 2rem;
+  width: fit-content;
+  margin: 1rem auto;
+  display: block; }
+  .footer .contact-links__link {
+    text-decoration: none; }
+
+@keyframes fadeOut {
+  0% { }
+  50% { }
+  100% { } }
