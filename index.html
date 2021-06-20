@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="/images/favicon.png" />
     <title>Shubham.</title>
   </head>
@@ -18,10 +18,21 @@
         class="nav__logo-img"
       />
       <ul class="nav__items">
-        <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-        <li class="nav__item nav__item--mode" onclick="Mode()">dArk mode</li>
+        <li class="nav__item">
+          <a href="#about-me" class="nav__link">About me</a>
+        </li>
+        <li class="nav__item">
+          <a href="#projects" class="nav__link">Projects</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">Contact</a>
+        </li>
+        <li
+          class="nav__item nav__item--mode"
+          onclick="Mode(), playAudio('switch.mp3')"
+        >
+          dArk mode
+        </li>
       </ul>
     </nav>
 
@@ -41,11 +52,13 @@
         & Software Engineer
       </h1>
 
-      <a href="#contact" class="btn">Contact Me &rarr;</a>
+      <a href="#contact" class="btn" onmouseover="playAudio('hover.mp3')"
+        >Contact Me <ion-icon name="chevron-forward-outline"></ion-icon
+      ></a>
     </header>
 
     <!-- PROJECTS -->
-    <main class="projects">
+    <main class="projects" id="projects">
       <h2 class="projects__heading">My Recent Projects 💻</h2>
 
       <img
@@ -80,6 +93,7 @@
             href="https://SabjiGrocery.com"
             target="_blank"
             class="btn btn--sec"
+            onmouseover="playAudio('hover.mp3')"
             >Visit Site 🔗
           </a>
         </div>
@@ -103,8 +117,20 @@
           <li>git</li>
         </ul>
         <div class="links">
-          <a href="#" target="_blank" class="btn btn--sec">GitHub 👨‍💻</a>
-          <a href="#" target="_blank" class="btn btn--sec">Visit Site 🔗</a>
+          <a
+            href="#"
+            target="_blank"
+            class="btn btn--sec"
+            onmouseover="playAudio('hover.mp3')"
+            >GitHub 👨‍💻</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            class="btn btn--sec"
+            onmouseover="playAudio('hover.mp3')"
+            >Visit Site 🔗</a
+          >
         </div>
       </div>
 
@@ -138,8 +164,20 @@
           <li>git</li>
         </ul>
         <div class="links">
-          <a href="#" target="_blank" class="btn btn--sec">GitHub 👨‍💻</a>
-          <a href="#" target="_blank" class="btn btn--sec">Visit Site 🔗</a>
+          <a
+            href="#"
+            target="_blank"
+            class="btn btn--sec"
+            onmouseover="playAudio('hover.mp3')"
+            >GitHub 👨‍💻</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            class="btn btn--sec"
+            onmouseover="playAudio('hover.mp3')"
+            >Visit Site 🔗</a
+          >
         </div>
       </div>
 
@@ -161,8 +199,20 @@
           <li>git</li>
         </ul>
         <div class="links">
-          <a href="https://github.com/Shubham0850/Natours"  target="_blank" class="btn btn--sec">GitHub 👨‍💻</a>
-          <a href="#" target="_blank" class="btn btn--sec">Visit Site 🔗</a>
+          <a
+            href="https://github.com/Shubham0850/Natours"
+            target="_blank"
+            class="btn btn--sec"
+            onmouseover="playAudio('hover.mp3')"
+            >GitHub 👨‍💻</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            class="btn btn--sec"
+            onmouseover="playAudio('hover.mp3')"
+            >Visit Site 🔗</a
+          >
         </div>
       </div>
 
@@ -197,8 +247,20 @@
           <li>git</li>
         </ul>
         <div class="links">
-          <a href="https://github.com/Shubham0850/Amity_Virtual_Lab" target="_blank" class="btn btn--sec">GitHub 👨‍💻</a>
-          <a href="#" target="_blank" class="btn btn--sec">Visit Site 🔗</a>
+          <a
+            href="https://github.com/Shubham0850/Amity_Virtual_Lab"
+            target="_blank"
+            class="btn btn--sec"
+            onmouseover="playAudio('hover.mp3')"
+            >GitHub 👨‍💻</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            class="btn btn--sec"
+            onmouseover="playAudio('hover.mp3')"
+            >Visit Site 🔗</a
+          >
         </div>
       </div>
     </main>
@@ -207,30 +269,45 @@
     <footer class="footer" id="contact">
       <h1 class="heading-primary">
         I like to resolve design problems,<br />
-        create smart user interface<br /> and imagine useful interaction,
-        developing <br />rich web experiences & web applications.
+        create smart user interface<br />
+        and imagine useful interaction, developing <br />rich web experiences &
+        web applications.
       </h1>
 
       <div class="contact-links">
-        <a href="mailto:rajshubham0850@gmail.com"
+        <a
+          href="mailto:rajshubham0850@gmail.com"
+          onmouseover="playAudio('hover.mp3')"
           ><ion-icon name="mail"></ion-icon>
         </a>
 
         <a
           href="https://www.linkedin.com/in/shubham-raj-98b7521a6/"
           target="_blank"
+          onmouseover="playAudio('hover.mp3')"
           ><ion-icon name="logo-linkedin"></ion-icon
         ></a>
 
-        <a href="https://github.com/Shubham0850" target="_blank"
+        <a
+          href="https://github.com/Shubham0850"
+          target="_blank"
+          onmouseover="playAudio('hover.mp3')"
           ><ion-icon name="logo-github"></ion-icon
         ></a>
 
-        <a href="https://twitter.com/rajshubham0850" target="_blank"
+        <a
+          href="https://twitter.com/rajshubham0850"
+          target="_blank"
+          onmouseover="playAudio('hover.mp3')"
           ><ion-icon name="logo-twitter"></ion-icon
         ></a>
 
-        <a href="https://codepen.io/rajshubham0850" target="_blank"><ion-icon name="logo-codepen"></ion-icon></a>
+        <a
+          href="https://codepen.io/rajshubham0850"
+          target="_blank"
+          onmouseover="playAudio('hover.mp3')"
+          ><ion-icon name="logo-codepen"></ion-icon
+        ></a>
       </div>
 
       <h3 class="heading-secondary">🙋Available for freelance projects</h3>
@@ -242,12 +319,56 @@
 
     <!-- --------------- -->
 
+    <div class="about-me-bg" id="about-me">
+      <div class="about-me">
+        <a href="#" class="close about-me__link">&times;</a>
+        <!-- <img
+          src="./images/dev.gif"
+          alt="shubham photo"
+          class="about-me__banner-img"
+        /> -->
+        <div class="about-me__banner"></div>
+
+        <div class="about-me__details">
+          <h1 class="heading-primary">About me.</h1>
+          <p class="paragraph">
+            I'm Shubham Raj, a 19-year-old Indian Front-end Engineer. I'm a
+            weird guy who likes making weird things with web technologies.<br />
+            I like to resolve design problems, create smart user interface and
+            imagine useful interaction, developing rich web experiences & web
+            applications. When not working or futzing around with code, I study
+            how to escape from University. Actually for hire.
+            <br />
+            I ❤️ working with Startups.
+          </p>
+          <h2 class="heading-secondary">🙋Available for freelance projects</h2>
+          <div class="about-me__link-box">
+            <a href="#" target="_blan" class="about-me__link">FIVERR</a>
+            <a href="#" target="_blan" class="about-me__link">UPWORK</a>
+          </div>
+
+          <div class="btn btn--sec" onmouseover="playAudio('hover.mp3')">
+            <ion-icon name="arrow-down-circle-outline"></ion-icon>
+            My Resume
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------- -->
+
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
     <script>
       function Mode() {
         var element = document.body;
         element.classList.toggle("dark-mode");
+      }
+
+      // play sound
+      function playAudio(url) {
+        const audioUrl = `/sound/${url}`;
+        new Audio(audioUrl).play();
       }
     </script>
   </body>
